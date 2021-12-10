@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Висельница</title>
+</head>
+<body>
+<h1>Добро пожаловать на <q>Висельницу</q></h1>
+<p>Let's go!!!</p>
+<script type="text/javascript">
+	// Создаем массив из слов
+var words = [
+"черепаха",
+"обезьяна",
+"слон",
+"жираф",
+"собака",
+"кошка",
+"варан",
+"кит",
+"хамелеон",
+"бегемот",
+"верблюд",
+"мышь",
+"хомяк",
+"заяц",
+"лиса",
+"волк",
+"медведь"
+];
+ 
+// Выбираем случайное слово
+var word = words[Math.floor(Math.random() * words.length)];
+ 
+// Устанавливаем массив ответов
+var answerArray = [];
+for (var i = 0; i < word.length; i++) {
+  answerArray[i] = "_";
+}
+ 
+var remainingLetters = word.length;
+ 
+// ИГРОВОЙ ЦИКЛ
+while (remainingLetters > 0) {
+// Показываем игроку его проегрсс
+alert("Угадайте животное:\n" + answerArray.join(" "));
+ 
+// Получаем варианты ответов от игрока
+var guess = prompt("Введите букву (только маленькие буквы), или нажми Отмена для завершения игры.");
+if (guess === null) {
+// Выход из игровог цикла
+break;
+} else if (guess.length !== 1) {
+alert("Пожалуйста введите одну букву");
+} else {
+// Обновляем состояние игры с помощью измененного параметра guess
+for (var j = 0; j < word.length; j++) {
+  if (word[j] === guess) {
+    answerArray[j] = guess; 
+ remainingLetters--;
+  }
+}
+}
+ 
+// КОНЕЦ игрового цикла
+}
+ 
+// Показваем ответ и поздравляем игрока
+ 
+ 
+ if (remainingLetters===0) {
+ alert("ОТВЕТ: \n" + answerArray.join(" "));
+ alert("МОЛОДЕЦ! Ответ " + word);
+   }
+   else {
+  alert("Очень ждаль :-(\nДо скорой встречи!");
+   }
+</script>
+</body>
+</html>
