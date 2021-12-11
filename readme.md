@@ -1,3 +1,3 @@
 # Learning javascript
 
-my first success on GitHub
+Learning javascript with book JavaScript for Kids
