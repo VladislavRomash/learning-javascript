@@ -1,3 +1,3 @@
-# Learning javascript
+# Learning JavaScript
 
-Learning javascript with book JavaScript for Kids
+Learning JavaScript with book JavaScript for Kids
